@@ -1,10 +1,10 @@
-package com.brijesh.springboot.taskApp;
+package com.example.spring.demoTaskApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TaskAppApplicationTests {
+class DemoTaskAppApplicationTests {
 
 	@Test
 	void contextLoads() {
