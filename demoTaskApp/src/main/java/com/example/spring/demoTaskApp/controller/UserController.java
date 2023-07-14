@@ -28,6 +28,13 @@ public class UserController {
         return userService.getUserById(id);
     }
 
+    @PostMapping("")
+    public Users addNewUser(@RequestBody Users users){
+
+        return userService.createUser(users);
+    }
+
+
 
     @PutMapping("/{userId}/tasks")
     public String saveNewTasksToCurrentUser(@PathVariable int userId,@RequestBody Tasks tasks){
