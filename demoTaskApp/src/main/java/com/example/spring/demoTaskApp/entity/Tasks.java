@@ -5,11 +5,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
+import lombok.experimental.FieldNameConstants;
 
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@ToString
 public class Tasks {
 
     @Id
@@ -20,11 +22,18 @@ public class Tasks {
 
     private boolean status;
 
+
+
+
     @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH},fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     @JsonIgnore
+    @ToString.Exclude
     private Users user;
 
 
-
+    public Tasks(String description, boolean status) {
+        this.description = description;
+        this.status = status;
+    }
 }

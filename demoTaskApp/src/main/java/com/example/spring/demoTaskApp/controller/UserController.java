@@ -1,12 +1,11 @@
 package com.example.spring.demoTaskApp.controller;
 
+import com.example.spring.demoTaskApp.entity.Tasks;
 import com.example.spring.demoTaskApp.entity.Users;
+import com.example.spring.demoTaskApp.services.TaskService;
 import com.example.spring.demoTaskApp.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,6 +15,9 @@ public class UserController {
     @Autowired
     private UserServices userService;
 
+    @Autowired
+    private TaskService taskService;
+
     @GetMapping
     public List<Users> getAllUsers() {
         return userService.getAllUsers();
@@ -24,6 +26,19 @@ public class UserController {
     @GetMapping("/{id}")
     public Users getUserById(@PathVariable int id) {
         return userService.getUserById(id);
+    }
+
+
+    @PutMapping("/{userId}/tasks")
+    public String saveNewTasksToCurrentUser(@PathVariable int userId,@RequestBody Tasks tasks){
+
+
+
+        Users user=userService.getUserById(userId);
+        user.addTasks(tasks);
+        userService.addTasksToCurrentUser(user);
+        return "Success";
+
     }
 
 

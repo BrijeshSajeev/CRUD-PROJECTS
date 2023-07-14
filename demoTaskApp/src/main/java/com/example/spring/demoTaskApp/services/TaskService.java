@@ -27,4 +27,9 @@ public class TaskService {
                 .orElseThrow(() -> new EntityNotFoundException("Task not found with id: " + id));
     }
 
+    public List<Tasks> findByUserId(int id) {
+        return taskRepository.findTasksByUserId(id);
+    }
+
+
 }

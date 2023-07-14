@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@ToString
 public class Users {
 
         @Id
@@ -29,10 +30,17 @@ public class Users {
 
         @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
         @JsonIgnore
+        @ToString.Exclude
         private List<Tasks> tasks;
 
 
-        public void addTasks(Tasks task){
+    public Users(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
+    public void addTasks(Tasks task){
             if (tasks==null)
                 tasks=new ArrayList<>();
             task.setUser(this);

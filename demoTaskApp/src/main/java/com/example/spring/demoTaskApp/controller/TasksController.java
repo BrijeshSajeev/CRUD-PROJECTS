@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users/tasks")
+@RequestMapping("/tasks")
 public class TasksController {
 
     @Autowired
@@ -29,5 +29,11 @@ public class TasksController {
     public Tasks getTaskById(@PathVariable int id) {
         return taskService.getTaskById(id);
     }
+
+    @GetMapping("/users/{id}")
+    public List<Tasks> getTaskByUserId(@PathVariable int id) {
+        return taskService.findByUserId(id);
+    }
+
 
 }
