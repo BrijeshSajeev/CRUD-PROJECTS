@@ -31,15 +31,22 @@ public class UserController {
 
     @PutMapping("/{userId}/tasks")
     public String saveNewTasksToCurrentUser(@PathVariable int userId,@RequestBody Tasks tasks){
-
-
-
         Users user=userService.getUserById(userId);
         user.addTasks(tasks);
         userService.addTasksToCurrentUser(user);
         return "Success";
 
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteUser(@PathVariable int id){
+
+            userService.deleteUserById(id);
+
+        return "Success";
+    }
+
+
 
 
 }

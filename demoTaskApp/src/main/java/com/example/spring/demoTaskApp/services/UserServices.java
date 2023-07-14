@@ -40,4 +40,10 @@ public class UserServices {
         userRepository.save(user);
     }
 
+    public void deleteUserById(int id){
+         userRepository.deleteById(id);
+    }
+
+
+
 }
