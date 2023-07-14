@@ -35,5 +35,13 @@ public class TasksController {
         return taskService.findByUserId(id);
     }
 
+    @DeleteMapping("/{id}")
+    public String deleteTask(@PathVariable int id){
+
+        taskService.deleteTaskById(id);
+
+        return "Success";
+    }
+
 
 }
