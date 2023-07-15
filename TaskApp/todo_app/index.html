@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="overall-container">
+      <div class="login-container container-login">
+        <form class="formc login--form">
+          <p class="form-title">Sign in to your account</p>
+          <div class="input-container">
+            <input placeholder="Enter email" type="email" />
+            <span>
+              <svg
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <div class="input-container">
+            <input placeholder="Enter password" type="password" />
+
+            <span>
+              <svg
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <button class="submit" type="submit">Sign in</button>
+
+          <p class="signup-link">
+            No account?
+            <a href="" class="btn-signup">Sign up</a>
+          </p>
+        </form>
+      </div>
+      <div class="login-container container-register maxim">
+        <div class="form-box">
+          <form class="forme">
+            <span class="title">Sign up</span>
+            <span class="subtitle">Create a free account with your email.</span>
+            <div class="form-container">
+              <input type="text" class="input" placeholder="Full Name" />
+              <input type="email" class="input" placeholder="Email" />
+              <input type="password" class="input" placeholder="Password" />
+            </div>
+            <button>Sign up</button>
+          </form>
+          <div class="form-section">
+            <p>Have an account? <a href="">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="con hidden">
+      <div class="container">
+        <h1>Productivity Planner</h1>
+        <form class="form">
+          <input type="text" class="input" placeholder="Add new task" />
+
+          <button type="button" class="button btn-add">
+            <span class="button__text">Add Item</span>
+            <span class="button__icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke="currentColor"
+                height="24"
+                fill="none"
+                class="svg"
+              >
+                <line y2="19" y1="5" x2="12" x1="12"></line>
+                <line y2="12" y1="12" x2="19" x1="5"></line></svg
+            ></span>
+          </button>
+        </form>
+
+        <ul class="tasks">
+          <!-- <li>
+          <input type="checkbox">
+          <span>Task 1</span>
+          <button class="noselect btn-delete" data-value="Task 1"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+        </li> -->
+          <!-- <li>
+          <input type="checkbox">
+          <span>Task 3</span>
+        
+        <button class="noselect btn-delete"><span class="text">Delete</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+        </li> -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
