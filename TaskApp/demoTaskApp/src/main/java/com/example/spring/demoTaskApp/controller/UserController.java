@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
     @Autowired
     private UserServices userService;
@@ -51,6 +51,12 @@ public class UserController {
             userService.deleteUserById(id);
 
         return "Success";
+    }
+
+    @GetMapping("/email/{email}")
+    public Users findUserByEmail(@PathVariable String email){
+
+        return userService.findUsersByEmail(email);
     }
 
 

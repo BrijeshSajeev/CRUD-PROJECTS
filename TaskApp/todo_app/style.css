@@ -170,7 +170,8 @@ button:active .icon svg {
 /*BTN ADD  */
 .button {
   position: relative;
-  width: 150px;
+  overflow: hidden;
+  width: 200px;
   height: 40px;
   cursor: pointer;
   display: flex;
@@ -195,7 +196,7 @@ button:active .icon svg {
   position: absolute;
   transform: translateX(109px);
   height: 100%;
-  width: 39px;
+  width: 34px;
   background-color: #34974d;
   display: flex;
   align-items: center;
