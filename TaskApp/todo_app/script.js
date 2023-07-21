@@ -86,17 +86,17 @@ const btnAdd = document.querySelector(".btn-add");
 // const btnDelete = document.querySelector('.btn-delete');
 const containerTask = document.querySelector(".tasks");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  form.reset();
-});
+//   form.reset();
+// });
 
-btnAdd.addEventListener("click", function (e) {
-  form.reset();
-});
+// btnAdd.addEventListener("click", function (e) {
+//   form.reset();
+// });
 
-containerTask.addEventListener("click", function (e) {
-  const btn = e.target.closest(".btn-delete");
-  if (!btn) return;
-});
+// containerTask.addEventListener("click", function (e) {
+//   const btn = e.target.closest(".btn-delete");
+//   if (!btn) return;
+// });
