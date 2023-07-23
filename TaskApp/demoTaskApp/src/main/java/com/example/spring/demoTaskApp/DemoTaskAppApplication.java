@@ -18,40 +18,5 @@ public class DemoTaskAppApplication {
 		SpringApplication.run(DemoTaskAppApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(UserServices userServices, TaskService taskService){
-
-		return runner->{
-
-//			addTaskToTheUser(userServices,taskService);
-		};
-
-	}
-
-	private void addTaskToTheUser(UserServices userServices, TaskService taskService) {
-
-		int id=3;
-		Users user=userServices.getUserById(id);
-		System.out.println(user);
-
-		List<Tasks> tasks=taskService.findByUserId(id);
-		user.setTasks(tasks);
-		Tasks newTask=new Tasks("Cook",true);
-		Tasks newTask1=new Tasks("wash",false);
-
-		user.addTasks(newTask);
-		user.addTasks(newTask1);
-
-		System.out.println(user.getTasks());
-
-		userServices.addTasksToCurrentUser(user);
-
-
-
-
-
-
-	}
-
 
 }
