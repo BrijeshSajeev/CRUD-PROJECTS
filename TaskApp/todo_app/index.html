@@ -76,21 +76,26 @@
                 class="input"
                 placeholder="Full Name"
                 name="name"
+                required
               />
+              <hr />
               <input
                 type="email"
                 class="input"
                 placeholder="Email"
                 name="email"
+                required
               />
+              <hr />
               <input
                 type="password"
                 class="input"
                 placeholder="Password"
                 name="password"
+                required
               />
             </div>
-            <button>Sign up</button>
+            <button type="submit">Sign up</button>
           </form>
           <div class="form-section">
             <p>Have an account? <a href="">Log in</a></p>
@@ -102,10 +107,15 @@
     <div class="con hidden">
       <div class="container">
         <h1>Productivity Planner</h1>
-        <form class="form">
-          <input type="text" class="input" placeholder="Add new task" />
+        <form class="form form-add">
+          <input
+            type="text"
+            class="input"
+            name="description"
+            placeholder="Add new task"
+          />
 
-          <button type="button" class="button btn-add">
+          <button type="submit" class="button btn-add">
             <span class="button__text">Add Item</span>
             <span class="button__icon"
               ><svg

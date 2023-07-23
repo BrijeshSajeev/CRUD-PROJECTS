@@ -45,7 +45,7 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-color: #008080;
   color: #fff;
   border: none;
@@ -168,7 +168,8 @@ button:active .icon svg {
 }
 
 /*BTN ADD  */
-.button {
+.btn-add {
+  margin-right: 1rem;
   position: relative;
   overflow: hidden;
   width: 200px;
@@ -180,19 +181,19 @@ button:active .icon svg {
   background-color: #3aa856;
 }
 
-.button,
+.btn-add,
 .button__icon,
 .button__text {
   transition: all 0.3s;
 }
 
-.button .button__text {
+.btn-add .button__text {
   transform: translateX(30px);
   color: #fff;
   font-weight: 600;
 }
 
-.button .button__icon {
+.btn-add .button__icon {
   position: absolute;
   transform: translateX(109px);
   height: 100%;
@@ -203,29 +204,29 @@ button:active .icon svg {
   justify-content: center;
 }
 
-.button .svg {
+.btn-add .svg {
   width: 30px;
   stroke: #fff;
 }
 
-.button:hover {
+.btn-add:hover {
   background: #34974d;
 }
 
-.button:hover .button__text {
+.btn-add:hover .button__text {
   color: transparent;
 }
 
-.button:hover .button__icon {
+.btn-add:hover .button__icon {
   width: 148px;
   transform: translateX(0);
 }
 
-.button:active .button__icon {
+.btn-add:active .button__icon {
   background-color: #2e8644;
 }
 
-.button:active {
+.btn-add:active {
   border: 1px solid #2e8644;
 }
 
