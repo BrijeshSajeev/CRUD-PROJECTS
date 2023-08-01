@@ -1,4 +1,4 @@
-package com.brijesh.securitydemo.userSecurity.controller;
+package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,4 +10,5 @@ public class DemoController {
     public String showHello(){
         return "hello";
     }
+
 }
