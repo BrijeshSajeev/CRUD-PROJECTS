@@ -27,6 +27,7 @@ public class SecurityConfig {
                 ).formLogin(form->
                     form
                             .loginPage("/showLoginPage")
+
                             .loginProcessingUrl("/authenticateTheUser")
                             .permitAll()
                 );
