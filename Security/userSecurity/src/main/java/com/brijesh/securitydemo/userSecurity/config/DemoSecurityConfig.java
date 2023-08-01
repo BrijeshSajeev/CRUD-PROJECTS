@@ -18,17 +18,5 @@ public class DemoSecurityConfig {
         return new JdbcUserDetailsManager(dataSource);
     }
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//
-//        http.authorizeHttpRequests(configurer ->
-//                configurer
-//                        .requestMatchers("/").hasRole("USER")
-////                        .requestMatchers("/leaders/**").hasRole("MANAGER")
-//                        .anyRequest().authenticated()
-//
-//                );
-//            return http.build();
-//    }
 
 }

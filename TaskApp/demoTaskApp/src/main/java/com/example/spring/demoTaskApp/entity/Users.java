@@ -43,6 +43,8 @@ public class Users {
     public void addTasks(Tasks task){
             if (tasks==null)
                 tasks=new ArrayList<>();
+
+
             task.setUser(this);
             tasks.add(task);
         }
