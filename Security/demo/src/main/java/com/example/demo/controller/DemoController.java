@@ -16,4 +16,8 @@ public class DemoController {
         return "login";
     }
 
+    @GetMapping("/showRegisterPage")
+    public String showRegisterPage(){
+        return "register";
+    }
 }

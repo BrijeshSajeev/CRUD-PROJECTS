@@ -22,8 +22,8 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(config ->
                 config
+                        .requestMatchers("/showRegisterPage").permitAll() // Allow access to the registration page
                         .anyRequest().authenticated()
-
                 ).formLogin(form->
                     form
                             .loginPage("/showLoginPage")
