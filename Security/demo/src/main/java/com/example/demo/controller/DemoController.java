@@ -20,4 +20,11 @@ public class DemoController {
     public String showRegisterPage(){
         return "register";
     }
+
+    @GetMapping("/leaders")
+    public String showEmployeePage(){
+        return "employee";
+    }
+
+
 }

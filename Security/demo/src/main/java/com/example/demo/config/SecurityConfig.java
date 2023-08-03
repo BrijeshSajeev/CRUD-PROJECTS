@@ -22,6 +22,8 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(config ->
                 config
+                        .requestMatchers("/").hasRole("USER")
+                        .requestMatchers("/leaders/**").hasRole("MANAGER")
                         .requestMatchers("/showRegisterPage").permitAll() // Allow access to the registration page
                         .anyRequest().authenticated()
                 ).formLogin(form->
