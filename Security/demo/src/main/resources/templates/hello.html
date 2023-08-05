@@ -22,9 +22,18 @@
             <div class="card-body">
                 <blockquote class="blockquote mb-0">
                     <p>Managers only.</p>
-                    <a action="#" th:action="@{/leaders}" class="btn btn-primary">click</a>
+                    <a action="#" th:href="@{/leaders}" class="btn btn-primary">click</a>
                 </blockquote>
+
             </div>
+
+            <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>Admin only.</p>
+                <a action="#" th:href="@{/leaders/admin}" class="btn btn-primary">click</a>
+            </blockquote>
+            </div>
+
         </div>
         <hr>
         <form action="#" th:action="@{/logout}" method="POST">
