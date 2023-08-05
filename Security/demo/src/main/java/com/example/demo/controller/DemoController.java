@@ -30,4 +30,11 @@ public class DemoController {
     public String showAdminPage(){
         return "admin";
     }
+
+    @GetMapping("/accessDenied")
+    public String showDeniedPage(){
+        return "accessDenied";
+    }
+
+
 }
