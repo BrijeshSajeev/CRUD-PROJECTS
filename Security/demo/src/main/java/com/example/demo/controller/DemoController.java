@@ -26,7 +26,7 @@ public class DemoController {
         return "employee";
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/admins")
     public String showAdminPage(){
         return "admin";
     }
